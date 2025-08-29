@@ -1,9 +1,59 @@
-# Sanity Clean Content Studio
+# Web Portfolio Backend — Sanity Studio (Essentials)
 
-Congratulations, you have now installed the Sanity Content Studio, an open-source real-time content editing environment connected to the Sanity backend.
+This is the backend (CMS) for my web portfolio, built with Sanity Studio v4 to manage content (projects, images, tech stack).
 
-Now you can do the following things:
+## Quick Start
 
-- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
-- [Join the Sanity community](https://www.sanity.io/community/join?utm_source=readme)
-- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+```bash
+# Install deps
+npm install
+
+# Run Studio (dev)
+npm run dev
+
+# Build Studio (prod)
+npm run build
+
+# Start built Studio
+npm run start
+```
+
+Open http://localhost:3333 (default) or the URL shown in terminal.
+
+## Environment
+
+If you fetch data from a frontend app, use these vars in that app (.env.local):
+
+```
+NEXT_PUBLIC_SANITY_PROJECT_ID=z7pmw5ai
+NEXT_PUBLIC_SANITY_DATASET=production
+SANITY_API_VERSION=2024-01-01
+# Server-only (optional, private dataset):
+SANITY_API_READ_TOKEN=your_read_token
+```
+
+Also add CORS origins in Sanity Manage → API → CORS:
+- http://localhost:3000 (dev frontend)
+- https://yourdomain.com (prod)
+
+## Scripts
+
+- dev: sanity dev
+- build: sanity build
+- start: sanity start
+
+Run with:
+```bash
+npm run <script>
+```
+
+## Content Types (summary)
+
+- Project: title, slug, description, technologies[] (iconUrl), images[] (image, alt, isMain), githubUrl, featured, yearCreated, category
+- Certificate: basic certificate fields
+
+## Config (already set)
+
+- projectId: z7pmw5ai
+- dataset: production
+- autoUpdates: enabled
