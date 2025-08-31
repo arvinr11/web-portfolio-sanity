@@ -1,3 +1,6 @@
 import project from './project'
 import certificate from './certificate'
-export const schemaTypes = [project, certificate]
+import cv from './cv'
+import portfolio from './portfolio'
+
+export const schemaTypes = [project, certificate, cv, portfolio]
