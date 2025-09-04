@@ -46,11 +46,14 @@ export default defineType({
               description: 'Path to SVG icon (e.g., /tech-logos/react.svg)',
               options: {
                 list: [
+                  { title: 'CSS', value: '/tech-logos/css.svg' },
                   { title: 'Dart', value: '/tech-logos/dart.svg' },
                   { title: 'Figma', value: '/tech-logos/figma.svg' },
                   { title: 'Firebase', value: '/tech-logos/firebase.svg' },
                   { title: 'Flutter', value: '/tech-logos/flutter.svg' },
                   { title: 'GitHub', value: '/tech-logos/github.svg' },
+                  { title: 'HTML', value: '/tech-logos/html.svg' },
+                  { title: 'JavaScript', value: '/tech-logos/js.svg' },
                   { title: 'Kotlin', value: '/tech-logos/kotlin.svg' },
                   { title: 'Node.js', value: '/tech-logos/nodejs.svg' },
                 ],
@@ -119,7 +122,7 @@ export default defineType({
       type: 'string',
       options: {
         list: [
-          { title: 'Web App', value: 'web-app' },
+          { title: 'Website', value: 'website' },
           { title: 'Mobile App', value: 'mobile-app' },
           { title: 'API', value: 'api' },
           { title: 'Desktop App', value: 'desktop-app' },
